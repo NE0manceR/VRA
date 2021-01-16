@@ -1,0 +1,24 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import TextField from '@material-ui/core/TextField';
+
+// eslint-disable-next-line react/prop-types
+const renderText = ({ input, label, type, meta: { touched, error, invalid } }) => (
+  <TextField
+    type={type}
+    label={label}
+    error={touched && invalid}
+    helperText={touched && error}
+    margin="normal"
+    fullWidth={true}
+    {...input}
+  />
+);
+
+renderText.propTypes = {
+  input: PropTypes.object.isRequired,
+  label: PropTypes.string.isRequired,
+  meta: PropTypes.object,
+};
+
+export default renderText;
