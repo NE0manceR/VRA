@@ -6,6 +6,7 @@ import { ConnectedRouter } from 'connected-react-router';
 import store, { history } from './store/configureStore';
 import { verifyToken } from './services/tokenService';
 import App from './containers/app/AppContainer';
+import './styles/sass/style.scss';
 
 const mountNode = document.getElementById('root');
 
