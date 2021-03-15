@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url(/fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: local('Montserrat'), url(/fonts/Montserrat/Montserrat-Bold.ttf);
+}
+
+.Grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 24px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 100px 50px;
+
+  @media (max-width: 1024px) {
+    padding: 50px 25px;
+  }
+
+  @media (max-width: 700px) {
+    padding: 50px 16px;
+  }
+}
+
+.showPage {
+  animation-name: showItems;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showItems {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+$color-primary-gradient: linear-gradient(103deg, #009fe3 0%, #e6007e 51%, #ffed00 100%);
+$color-primary: #e6007e;
+$color-secondary:#333333;
+$color-secondary-height:#5B5B5B;
+$color-warning:#EC3B3B;
+$color-ui-primary:#F4F4F4;
+$color-ui-secondary:#565656;
+$color-ui-secondary-low:#1D1D1B;
+$color-white:#FFFFFF;
