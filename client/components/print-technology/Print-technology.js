@@ -6,7 +6,7 @@ import MateBtn from '../common/buttons/mate-btn/Mate-btn';
 import Footer from '../footer/Footer';
 import Order from '../common/order/Order';
 
-const PrintTechnology = (props) => {
+const PrintTechnology = () => {
   let techArr = [
     {
       id: 0,
@@ -17,9 +17,9 @@ const PrintTechnology = (props) => {
       order: true,
       bcg: true,
       img: [
-        '/img/printTechnology/example.png',
-        '/img/printTechnology/example.png',
-        '/img/printTechnology/example.png',
+        '/img/printTechnology/photos/1.offset_catalogue.jpg',
+        '/img/printTechnology/photos/1.offset_map.jpg',
+        '/img/printTechnology/photos/1.offset_menu.jpg',
       ],
     },
     {
@@ -31,9 +31,9 @@ const PrintTechnology = (props) => {
       order: false,
       bcg: false,
       img: [
-        '/img/printTechnology/example.png',
-        '/img/printTechnology/example.png',
-        '/img/printTechnology/example.png',
+        '/img/printTechnology/photos/2.digital_bc.jpg',
+        '/img/printTechnology/photos/2.digital_catalogue.jpg',
+        '/img/printTechnology/photos/2.digital_catalogueOM.jpg',
       ],
     },
 
@@ -46,9 +46,9 @@ const PrintTechnology = (props) => {
       order: true,
       bcg: true,
       img: [
-        '/img/printTechnology/example.png',
-        '/img/printTechnology/example.png',
-        '/img/printTechnology/example.png',
+        '/img/printTechnology/photos/3.solvent_banner.jpg',
+        '/img/printTechnology/photos/3.solvent_bannerF.jpg',
+        '/img/printTechnology/photos/3.solvent_presswall.jpg',
       ],
     },
 
@@ -61,9 +61,9 @@ const PrintTechnology = (props) => {
       order: false,
       bcg: false,
       img: [
-        '/img/printTechnology/example.png',
-        '/img/printTechnology/example.png',
-        '/img/printTechnology/example.png',
+        '/img/printTechnology/photos/4.ecosolvent_photopanno.jpg',
+        '/img/printTechnology/photos/4.ecosolvent_poster.jpg',
+        '/img/printTechnology/photos/4.ecosolvent_posterBig.jpg',
       ],
     },
     {
@@ -77,9 +77,9 @@ const PrintTechnology = (props) => {
       order: true,
       bcg: true,
       img: [
-        '/img/printTechnology/example.png',
-        '/img/printTechnology/example.png',
-        '/img/printTechnology/example.png',
+        '/img/printTechnology/photos/5.trafaret_bc.jpg',
+        '/img/printTechnology/photos/5.trafaret_bc2.jpg',
+        '/img/printTechnology/photos/5.trafaret_ecobag.jpg',
       ],
     },
     {
@@ -91,9 +91,9 @@ const PrintTechnology = (props) => {
       order: false,
       bcg: false,
       img: [
-        '/img/printTechnology/example.png',
-        '/img/printTechnology/example.png',
-        '/img/printTechnology/example.png',
+        '/img/printTechnology/photos/6.tampodruk_pen.jpg',
+        '/img/printTechnology/photos/6.tampodruk_penE.jpg',
+        '/img/printTechnology/photos/6.tampodruk_pensil.jpg',
       ],
     },
     {
@@ -107,9 +107,9 @@ const PrintTechnology = (props) => {
       order: true,
       bcg: true,
       img: [
-        '/img/printTechnology/example.png',
-        '/img/printTechnology/example.png',
-        '/img/printTechnology/example.png',
+        '/img/printTechnology/photos/7.sublimacia_cup.jpg',
+        '/img/printTechnology/photos/7.sublimacia_flag.jpg',
+        '/img/printTechnology/photos/7.sublimacia_flags.jpg',
       ],
     },
     {
@@ -121,9 +121,9 @@ const PrintTechnology = (props) => {
       order: false,
       bcg: false,
       img: [
-        '/img/printTechnology/example.png',
-        '/img/printTechnology/example.png',
-        '/img/printTechnology/example.png',
+        '/img/printTechnology/photos/8.termotranfernyy_hoodie.jpg',
+        '/img/printTechnology/photos/8.termotranfernyy_tsirtD.jpg',
+        '/img/printTechnology/photos/8.termotransfernyy_tshirt.jpg',
       ],
     },
     {
@@ -135,9 +135,9 @@ const PrintTechnology = (props) => {
       order: true,
       bcg: true,
       img: [
-        '/img/printTechnology/example.png',
-        '/img/printTechnology/example.png',
-        '/img/printTechnology/example.png',
+        '/img/printTechnology/photos/9.tysnennia_bdiary.jpg',
+        '/img/printTechnology/photos/9.tysnennia_bdiaryV.jpg',
+        '/img/printTechnology/photos/9.tysnennia_folders.jpg',
       ],
     },
     {
@@ -149,9 +149,9 @@ const PrintTechnology = (props) => {
       order: false,
       bcg: false,
       img: [
-        '/img/printTechnology/example.png',
-        '/img/printTechnology/example.png',
-        '/img/printTechnology/example.png',
+        '/img/printTechnology/photos/10.vyshyvka_cap.jpg',
+        '/img/printTechnology/photos/10.vyshyvka_capL.jpg',
+        '/img/printTechnology/photos/10.vyshyvka_tsirt.jpg',
       ],
     },
     {
@@ -163,9 +163,9 @@ const PrintTechnology = (props) => {
       order: true,
       bcg: true,
       img: [
-        '/img/printTechnology/example.png',
-        '/img/printTechnology/example.png',
-        '/img/printTechnology/example.png',
+        '/img/printTechnology/photos/11.chimtravlennia_namebadge.jpg',
+        '/img/printTechnology/photos/11.chimtravlennia_namebadgeB.jpg',
+        '/img/printTechnology/photos/11.chimtravlennia_sign.jpg',
       ],
     },
     {
@@ -179,9 +179,9 @@ const PrintTechnology = (props) => {
       order: false,
       bcg: false,
       img: [
-        '/img/printTechnology/example.png',
-        '/img/printTechnology/example.png',
-        '/img/printTechnology/example.png',
+        '/img/printTechnology/photos/12.laser_danylo.jpg',
+        '/img/printTechnology/photos/12.laser_gelicon.jpg',
+        '/img/printTechnology/photos/12.laser_vodocanal.jpg',
       ],
     },
     {
@@ -193,9 +193,8 @@ const PrintTechnology = (props) => {
       order: true,
       bcg: true,
       img: [
-        '/img/printTechnology/example.png',
-        '/img/printTechnology/example.png',
-        '/img/printTechnology/example.png',
+        '/img/printTechnology/photos/13.dekol_ashtray.jpg',
+        '/img/printTechnology/photos/13.dekol_cup.jpg',
       ],
     },
   ];

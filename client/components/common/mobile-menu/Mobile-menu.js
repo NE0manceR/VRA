@@ -98,7 +98,7 @@ const MobileMenu = (props) => {
                 </button>
                 {printCategory.map(({ linkName, id, linkUrl }) => {
                   return (
-                    <Fragment>
+                    <Fragment key={id}>
                       {id !== 0 ? (
                         <Link
                           className={`MobMenu__link`}

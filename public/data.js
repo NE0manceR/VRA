@@ -17,9 +17,7 @@ export const data = {
     hoverContentStatus: false,
     hoverLeavMouese: false,
     test() {
-     return(
-     this.hoverLeavMouese = !this.hoverLeavMouese
-     );
+      return (this.hoverLeavMouese = !this.hoverLeavMouese);
     },
     hoverImgText: [
       {},
@@ -65,6 +63,8 @@ export const data = {
           { id: 0, linkName: 'Логотип', linkUrl: '/logotype' },
           { id: 1, linkName: 'Брендбук', linkUrl: '/brandbook' },
           { id: 2, linkName: 'Фірмовий стиль', linkUrl: '/corporate' },
+          { id: 3, linkName: '3D Дизайн', linkUrl: '/3d' },
+
         ],
       },
 
@@ -123,7 +123,6 @@ export const data = {
           { id: 11, linkName: 'Лазерне гравіювання', linkUrl: '/printing-technology#lazer' },
           { id: 12, linkName: 'Деколь', linkUrl: '/printing-technology#dekol' },
           { id: 13, linkName: 'Хімічне травлення', linkUrl: '/printing-technology#trav' },
-
         ],
       },
       {
@@ -196,7 +195,12 @@ export const data = {
   bestServicesBlocks: [
     { id: 0, link: '/category', title: 'Дизайн', img: '/img/HomePage/best/Photo1.png' },
     { id: 1, link: '/print', title: 'Друк', img: '/img/HomePage/best/Photo2.png' },
-    { id: 2, link: '/category', title: 'Сувенірна продукція', img: '/img/HomePage/best/Photo3.png' },
+    {
+      id: 2,
+      link: '/category',
+      title: 'Сувенірна продукція',
+      img: '/img/HomePage/best/Photo3.png',
+    },
     { id: 3, link: '/category', title: 'Візуальна реклама', img: '/img/HomePage/best/Photo4.png' },
     { id: 4, link: '/category', title: 'Текстиль', img: '/img/HomePage/best/Photo5.png' },
   ],
@@ -298,24 +302,48 @@ export const data = {
       title: 'Вивчаємо та аналізуємо',
       blockName1: 'Етап дослідження:',
       blockname2: 'Документи та матеріали, що надаються:',
-      blockText1: 'Зустріч з замовником (в офісі чи онлайн) Визначення мети та завдання проєктуПроведення воркшопів',
-      blockText2: 'Вивчення бізнес-моделі  Аналіз конкурентів (Google Spreadsheets) Аналіз користувачів Бізнес вимоги Функціональні вимоги до проєкту'
+      blockText1: [
+        { id: 0, text: 'Зустріч з замовником (в офісі чи онлайн)' },
+        { id: 1, text: 'Визначення мети та завдання проєкту' },
+        { id: 2, text: 'Проведення воркшопів' },
+      ],
+      blockText2: [
+        { id: 0, text: 'Вивчення бізнес-моделі' },
+        { id: 1, text: 'Аналіз конкурентів (Google Spreadsheets) ' },
+        { id: 2, text: 'Бізнес вимоги' },
+        { id: 3, text: 'Функціональні вимоги до проєкту' },
+      ],
     },
     {
       title: 'Проектування та дизайн',
       blockName1: 'Етап продукування ідей:',
       blockname2: 'Документи та матеріали, що надаються:',
-      blockText1: 'Розробка концепції Маркетингові застави Вимоги бренду (ґайдлайни) Систематизування інформації Опис користувача Вироблення контексту та інсайтів',
-      blockText2: 'Генерація ідей та концепцій (Miro, Jamboard Прототипи Lo-fidelity для погодження (інструментарій Adobe) Воркшоп- презентація рішень (PDF) онлайн чи в офісі'
+      blockText1: [
+        { id: 0, text: 'Розробка концепції' },
+        { id: 1, text: 'Маркетингові застави' },
+        { id: 2, text: 'Вимоги бренду (ґайдлайни)' },
+        { id: 3, text: 'Систематизування інформації ' },
+        { id: 4, text: 'Опис користувача' },
+        { id: 5, text: 'Вироблення контексту та інсайтів' },
+      ],
+      blockText2: [
+        {
+          id: 0,
+          text:
+            'Генерація ідей та концепцій (Miro, Jamboard Прототипи Lo-fidelity для погодження (інструментарій Adobe)',
+        },
+        { id: 1, text: 'Воркшоп-презентація рішень (PDF) онлайн чи в офісі' },
+      ],
     },
 
     {
       title: 'Створення та втілення',
       blockName1: 'Етап реалізації продукту:',
       blockname2: 'Документи та матеріали, що надаються:',
-      blockText1: 'Виробництво продукту',
-      blockText2: 'Фінальні макети згідно з технічними вимогами для друку, пошиву тощо.'
-    }
+      blockText1: [{ id: 0, text: 'Виробництво продукту' }],
+      blockText2: [
+        { id: 0, text: 'Фінальні макети згідно з технічними вимогами для друку, пошиву тощо.' },
+      ],
+    },
   ],
-
 };

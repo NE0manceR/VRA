@@ -20,6 +20,7 @@ const AsyncAbout = loadable(() => import('../containers/about/AboutContainer'));
 const AsyncPayment = loadable(() => import('../containers/payment/PaymentContainer'));
 const AsyncPartners = loadable(() => import('../containers/partners/PartnerContainer'));
 const AsyncPrint = loadable(() => import('../containers/print/PrintContainer'));
+const AsyncPage3D = loadable(() => import('../containers/page-3D/Page3DContainer'));
 
 const AsyncRequirements = loadable(() =>
   import('../containers/requirements/RequirementsContainer')
@@ -55,6 +56,7 @@ const Router = () => (
       <PublicRoute exact path="/order" component={AsyncOrderPage} />
       <PublicRoute exact path="/partners" component={AsyncPartners} />
       <PublicRoute exact path="/print" component={AsyncPrint} />
+      <PublicRoute exact path="/3d" component={AsyncPage3D} />
 
       <Route component={NotFound} />
     </Switch>

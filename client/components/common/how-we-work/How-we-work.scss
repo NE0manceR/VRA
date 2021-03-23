@@ -498,8 +498,8 @@
 
     div {
       display: grid;
-      row-gap: 14px;
-      grid-template-rows: 48px max-content;
+      row-gap: 8px;
+      grid-template-rows: 48px max-content max-content 1fr;
 
       @media (max-width: 550px) {
         margin-left: 0;

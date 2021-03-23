@@ -66,7 +66,6 @@ const CaseTemplate = () => {
   function copyLink(link) {
     navigator.clipboard.writeText(link);
     setLinkCopy(true);
-    console.log(link);
 
     setTimeout(() => {
       setLinkCopy(false);
@@ -79,9 +78,6 @@ const CaseTemplate = () => {
   }
 
   function setWrap() {
-    console.log(window.innerWidth / 2);
-    console.log(caseRef.current.querySelectorAll('.Photo')[0].clientWidth);
-
     setWrapP((window.innerWidth - caseRef.current.querySelectorAll('.Photo')[0].clientWidth) / 2);
   }
 

@@ -55,10 +55,8 @@
     align-items: center;
     transition: 0.3s;
 
-    span {
-      // background: $color-primary-gradient;
-      // -webkit-background-clip: text;
-      // -webkit-text-fill-color: transparent;
+    span,
+    a {
       color: $color-primary;
       font-family: 'Montserrat', 'serif';
       font-style: normal;
@@ -73,9 +71,10 @@
   }
 
   &:hover span {
-    // background: white;
-    // -webkit-background-clip: text;
-    // -webkit-text-fill-color: transparent;
+    color: white;
+  }
+
+  &:hover a {
     color: white;
   }
 }

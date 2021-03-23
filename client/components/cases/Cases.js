@@ -38,9 +38,7 @@ const Cases = () => {
       src: '/img/cases/1.png',
       url: `/caseTemplate`,
       category: 'design',
-      returnUrl: function test() {
-        return `${this.url}/${this.id}`;
-      },
+      text: 'Виготовлення та друк фірмових пакетів Genesis Estetic Clinic',
     },
     {
       id: 1,

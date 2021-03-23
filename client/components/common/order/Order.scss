@@ -138,6 +138,16 @@
 
   .text-area {
     height: 144px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .form-alert {
+    font-family: 'Montserrat-Bold', 'serif';
+    color: $color-primary;
+  }
+
+  .file-weight {
+    font-family: 'Montserrat-Bold', 'serif';
   }
 
   .input-active {

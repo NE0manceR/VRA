@@ -5,12 +5,14 @@ const WhiteBtn = (props) => {
   return (
     <div
       onClick={() => {
-        props.morePhoto();
+        {
+          props.link ? null : props.morePhotoInLogo();
+        }
       }}
       className={`Gradient-stroke ${props.className}`}
     >
       <div>
-        <span>{props.children}</span>
+        {props.link ? <Link to={'/case'}>{props.children}</Link> : <span>{props.children}</span>}
       </div>
       <div className="yellow-line"></div>
     </div>

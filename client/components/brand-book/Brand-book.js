@@ -49,36 +49,121 @@ const BrandBook = () => {
   let photoExample = [
     {
       id: 0,
-      blockClass: 'Gallery__photo-1',
       photo: '/img/HomePage/gallery/photo2.png',
       link: '/',
       category: 'printing',
     },
     {
       id: 1,
-      blockClass: 'Gallery__photo-2',
       photo: '/img/HomePage/gallery/photo2.png',
       link: '/',
       category: 'printing',
     },
     {
       id: 2,
-      blockClass: 'Gallery__photo-3',
       photo: '/img/HomePage/gallery/photo2.png',
       link: '/',
       category: 'printing',
     },
     {
       id: 3,
-      blockClass: 'Gallery__photo-4',
       photo: '/img/HomePage/gallery/photo2.png',
       link: '/',
       category: 'printing',
     },
     {
       id: 4,
-      blockClass: 'Gallery__photo-5',
       photo: '/img/HomePage/gallery/photo2.png',
+      link: '/',
+      category: 'printing',
+    },
+    {
+      id: 5,
+      photo: '/img/HomePage/gallery/photo4.png',
+      link: '/',
+      category: 'printing',
+    },
+    {
+      id: 6,
+      photo: '/img/HomePage/gallery/photo1.png',
+      link: '/',
+      category: 'printing',
+    },
+    {
+      id: 7,
+      photo: '/img/HomePage/gallery/photo1.png',
+      link: '/',
+      category: 'printing',
+    },
+    {
+      id: 8,
+      photo: '/img/HomePage/gallery/photo1.png',
+      link: '/',
+      category: 'printing',
+    },
+    {
+      id: 9,
+      photo: '/img/HomePage/gallery/photo1.png',
+      link: '/',
+      category: 'printing',
+    },
+    {
+      id: 10,
+      photo: '/img/HomePage/gallery/photo1.png',
+      link: '/',
+      category: 'printing',
+    },
+    {
+      id: 11,
+      photo: '/img/HomePage/gallery/photo1.png',
+      link: '/',
+      category: 'printing',
+    },
+    {
+      id: 12,
+      photo: '/img/HomePage/gallery/photo1.png',
+      link: '/',
+      category: 'printing',
+    },
+    {
+      id: 13,
+      photo: '/img/HomePage/gallery/photo1.png',
+      link: '/',
+      category: 'printing',
+    },
+    {
+      id: 14,
+      photo: '/img/HomePage/gallery/photo1.png',
+      link: '/',
+      category: 'printing',
+    },
+    {
+      id: 16,
+      photo: '/img/HomePage/gallery/photo1.png',
+      link: '/',
+      category: 'printing',
+    },
+    {
+      id: 17,
+      photo: '/img/HomePage/gallery/photo1.png',
+      link: '/',
+      category: 'printing',
+    },
+    {
+      id: 18,
+      photo: '/img/HomePage/gallery/photo1.png',
+      link: '/',
+      category: 'printing',
+    },
+    {
+      id: 19,
+      photo: '/img/HomePage/gallery/photo1.png',
+      link: '/',
+      category: 'printing',
+    },
+    {
+      id: 20,
+      photo: '/img/HomePage/gallery/photo1.png',
       link: '/',
       category: 'printing',
     },
@@ -199,7 +284,7 @@ const BrandBook = () => {
           <span className="Portfolio__title">Приклади брендбуків</span>
           <span className="Portfolio__descr">Приклади візиток, флаєрів</span>
         </div>
-        <Gallery btn={true} addPhoto={photoExample} className="Portfolio__photos" />
+        <Gallery btn addPhoto={photoExample} className="Portfolio__photos" />
       </div>
       <Order />
       <Footer />

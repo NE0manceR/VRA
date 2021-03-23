@@ -8,7 +8,6 @@ function HowWeWork() {
   let item = data.howWeWork;
   let [cardItem, setItem] = useState(data.howWeWorkCard);
   let [card, setCard] = useState(0);
-  let [animStatus, setAnim] = useState(false);
   let [active, setActive] = useState(false);
   let [selected, setSelected] = useState(0);
   let tab = useRef();
@@ -23,7 +22,6 @@ function HowWeWork() {
 
   function changeCard(cardKey) {
     setTimeout(() => {
-      setAnim(true);
       setActive(true);
       setCard((card = cardKey));
     }, 500);
@@ -163,11 +161,23 @@ function HowWeWork() {
                 <div className="Work-card__descr-wrap">
                   <div>
                     <span className="Work-card__descr-title">{cardItem[card].blockName1}</span>
-                    <span className="Work-card__descr">{cardItem[card].blockText1}</span>
+                    {cardItem[card].blockText1.map(({ text, id }) => {
+                      return (
+                        <span key={id} className="Work-card__descr">
+                          {text}
+                        </span>
+                      );
+                    })}
                   </div>
                   <div>
                     <span className="Work-card__descr-title">{cardItem[card].blockName2}</span>
-                    <span className="Work-card__descr">{cardItem[card].blockText2}</span>
+                    {cardItem[card].blockText2.map(({ text, id }) => {
+                      return (
+                        <span key={id} className="Work-card__descr">
+                          {text}
+                        </span>
+                      );
+                    })}
                   </div>
                 </div>
               </div>

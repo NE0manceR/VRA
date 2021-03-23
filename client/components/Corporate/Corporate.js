@@ -50,35 +50,42 @@ const Corporate = () => {
   let photoExample = [
     {
       id: 0,
-      blockClass: 'Gallery__photo-1',
       photo: '/img/HomePage/gallery/photo2.png',
       link: '/',
       category: 'printing',
     },
     {
       id: 1,
-      blockClass: 'Gallery__photo-2',
       photo: '/img/HomePage/gallery/photo2.png',
       link: '/',
       category: 'printing',
     },
     {
       id: 2,
-      blockClass: 'Gallery__photo-3',
       photo: '/img/HomePage/gallery/photo2.png',
       link: '/',
       category: 'printing',
     },
     {
       id: 3,
-      blockClass: 'Gallery__photo-4',
       photo: '/img/HomePage/gallery/photo2.png',
       link: '/',
       category: 'printing',
     },
     {
       id: 4,
-      blockClass: 'Gallery__photo-5',
+      photo: '/img/HomePage/gallery/photo2.png',
+      link: '/',
+      category: 'printing',
+    },
+    {
+      id: 5,
+      photo: '/img/HomePage/gallery/photo2.png',
+      link: '/',
+      category: 'printing',
+    },
+    {
+      id: 6,
       photo: '/img/HomePage/gallery/photo2.png',
       link: '/',
       category: 'printing',
@@ -112,7 +119,6 @@ const Corporate = () => {
         </span>
         <img src="/img/corporate/corporate.png" alt="img" />
       </div>
-
       <div className="Style-bcg">
         <div className="Style Grid">
           <h5 className="Style Title">
@@ -130,7 +136,6 @@ const Corporate = () => {
           </div>
         </div>
       </div>
-
       <div className="Step Grid">
         <h5 className="Step__title">Розробка фірмового стилю передбачає:</h5>
         <div className="Step__text-wrap">
@@ -164,7 +169,6 @@ const Corporate = () => {
           </div>
         </div>
       </div>
-
       <div className="Pricing-bcg">
         <div className="Pricing Grid">
           <h5 className="Pricing__title Title">
@@ -177,7 +181,7 @@ const Corporate = () => {
         <div className="Corporate__examples">
           <h2 className="Corporate__examples-title">Приклади робіт</h2>
           <span className="Corporate__examples-description">Приклади логотипів</span>
-          <Gallery addPhoto={photoExample} className="Corporate__gallery"></Gallery>
+          <Gallery btn addPhoto={photoExample} className="Corporate__gallery" />
         </div>
       </div>
       <Order></Order>

@@ -88,35 +88,30 @@ const Logotype = () => {
   let photoExample = [
     {
       id: 0,
-      blockClass: 'Gallery__photo-1',
       photo: '/img/HomePage/gallery/photo2.png',
       link: '/',
       category: 'printing',
     },
     {
       id: 1,
-      blockClass: 'Gallery__photo-2',
       photo: '/img/HomePage/gallery/photo2.png',
       link: '/',
       category: 'printing',
     },
     {
       id: 2,
-      blockClass: 'Gallery__photo-3',
       photo: '/img/HomePage/gallery/photo2.png',
       link: '/',
       category: 'printing',
     },
     {
       id: 3,
-      blockClass: 'Gallery__photo-4',
       photo: '/img/HomePage/gallery/photo2.png',
       link: '/',
       category: 'printing',
     },
     {
       id: 4,
-      blockClass: 'Gallery__photo-5',
       photo: '/img/HomePage/gallery/photo2.png',
       link: '/',
       category: 'printing',
@@ -199,7 +194,7 @@ const Logotype = () => {
         <div className="Logotype__examples">
           <h2 className="Logotype__examples-title">Приклади робіт</h2>
           <span className="Logotype__examples-description">Приклади логотипів</span>
-          <Gallery addPhoto={photoExample} className="Logotype__gallery"></Gallery>
+          <Gallery btn addPhoto={photoExample} className="Logotype__gallery" />
         </div>
       </div>
       <Order></Order>

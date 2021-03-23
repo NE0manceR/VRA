@@ -34,7 +34,6 @@ const Home = () => {
 
   function animation() {
     if (grandFather.current.getBoundingClientRect().top < 300) {
-      console.log('work');
       setgrandAni(true);
     } else {
       setgrandAni(false);
@@ -443,7 +442,7 @@ const Home = () => {
               classNameMob="TabMob_position"
               classNameDesc="TabDesc_position"
             />
-            <Gallery btn={true} gridNumber={grid} addPhoto={addPhoto} />
+            <Gallery link addPhoto={addPhoto} />
           </div>
         </div>
       </Reveal>

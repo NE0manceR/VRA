@@ -4,10 +4,11 @@ import './Order.scss';
 import { Link } from 'react-router-dom';
 import MateBtn from '../buttons/mate-btn/Mate-btn';
 
-function Order() {
+function Order(props) {
   let inputName = useRef();
   let inputMail = useRef();
   let inputArea = useRef();
+  let fileInput = useRef();
 
   let [name, setName] = useState(false);
   let [mail, setMail] = useState(false);
@@ -72,9 +73,19 @@ function Order() {
     }
   }
 
+  function ValidateSize() {
+    console.log(fileInput.current.files);
+    console.log('FileSize');
+  }
+
   return (
     <div className="Order">
-      <h2 className="Order__title">Давайте реалізуємо вашу ідею разом!</h2>
+      <h2
+        style={{ fontFamily: props.newText ? 'Montserrat-Bold' : 'Montserrat' }}
+        className="Order__title"
+      >
+        {props.newText ? props.children : 'Давайте реалізуємо вашу ідею разом!'}
+      </h2>
       <p className="Order__description">
         Залиште свої контактні дані та макет і ми найближчим часом повідомимо вартість друку.
       </p>
@@ -128,6 +139,18 @@ function Order() {
             }}
           />
         </div>
+        <p>
+          <span
+            onClick={() => {
+              ValidateSize(this);
+            }}
+            className="form-alert"
+          >
+            Зверніть увагу!
+          </span>{' '}
+          Якщо розмір ваших файлів перевищує <span className="file-weight">100MB</span>,
+          прикріпляйте у повідомлення посилання на хмарне сховище (Google Drive, Dropbox тощо){' '}
+        </p>
         <div className="btn-wrap">
           <div className="items-wrap">
             <div className="file-wrap">
@@ -147,7 +170,14 @@ function Order() {
                 />
               </svg>
               <span>Прикріпити файл</span>
-              <input type="file" />
+              <input
+                multiple
+                ref={fileInput}
+                onChange={() => {
+                  ValidateSize(this);
+                }}
+                type="file"
+              />
             </div>
             <div className="info-block-wrap">
               <svg

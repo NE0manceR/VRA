@@ -8,6 +8,11 @@
   src: local('Montserrat'), url(/fonts/Montserrat/Montserrat-Bold.ttf);
 }
 
+@font-face {
+  font-family: 'Montserrat-Extra-Bold';
+  src: local('Montserrat'), url(/fonts/Montserrat/Montserrat-ExtraBold.ttf);
+}
+
 .Grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -27,7 +32,7 @@
 
 .showPage {
   animation-name: showItems;
-  animation-duration: 0.6s;
+  animation-duration: 0.7s;
   animation-fill-mode: forwards;
 }
 

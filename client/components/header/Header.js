@@ -62,6 +62,14 @@ class Header extends Component {
     });
   };
 
+  scrollTopHomePage = () => {
+    console.log('work');
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   hideMenu = () => {
     let showMenu = this.state.hoverMenu;
     showMenu = false;
@@ -125,7 +133,7 @@ class Header extends Component {
 
   render() {
     return (
-      <div style={{ position: 'sticky', top: 0, zIndex: 4 }}>
+      <div style={{ position: 'sticky', top: 0, zIndex: 8 }}>
         <Transition in={this.state.hoverMenu} timeout={100}>
           {(state) => (
             <div ref={this.headerWrap} className={`Header ${state}`}>
@@ -178,7 +186,7 @@ class Header extends Component {
                         <Link
                           onMouseEnter={this.hideMenu}
                           className={`Header__logo ${state}`}
-                          onClick={() => (this.active = 7)}
+                          onClick={() => ((this.active = 7), this.scrollTopHomePage())}
                           to={'/'}
                         >
                           <img src="img/header/headerLogo.svg" alt="img" />

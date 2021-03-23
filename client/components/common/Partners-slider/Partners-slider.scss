@@ -13,9 +13,9 @@
 
 .Partners {
   display: grid;
-  grid-template-columns: repeat(22, 204px);
+  grid-template-columns: repeat(22, 108px);
   animation: move 30s linear infinite alternate;
-  column-gap: 24px;
+  column-gap: 64px;
 
   .Partners-wrap {
     height: 135px;
