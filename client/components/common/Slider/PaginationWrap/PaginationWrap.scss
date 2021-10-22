@@ -1,0 +1,7 @@
+.PaginationWrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 18px);
+  width: 100%;
+  gap: 12px;
+  justify-content: center;
+}

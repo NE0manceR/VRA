@@ -1,0 +1,46 @@
+.Partners-bcg {
+  background: #fafafa;
+  position: relative;
+
+  a {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+}
+
+.Partners {
+  display: grid;
+  grid-auto-flow: column;
+  animation: move 30s linear infinite alternate;
+  column-gap: 64px;
+
+  .Partners-wrap {
+    height: 135px;
+    width: 108px;
+    display: grid;
+    justify-content: center;
+    justify-content: center;
+    align-content: center;
+    padding: 16px;
+    align-items: center;
+    grid-template-rows: 98px;
+
+    .Partners-logo {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain !important;
+    }
+  }
+}
+
+@keyframes move {
+  0% {
+  }
+
+  100% {
+    transform: translateX(-1100px);
+  }
+}

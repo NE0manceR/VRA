@@ -1,0 +1,33 @@
+@import './../../../../public//css//main.scss';
+.Black-text {
+  position: relative;
+  z-index: 1;
+  color: white;
+  justify-self: start;
+  display: inline-block;
+  margin-right: 15px;
+  &::before {
+    content: '';
+    background: $color-secondary;
+    display: inline;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    padding: 4px 10px;
+    left: -7px;
+    justify-self: start;
+  }
+}
+
+.Text {
+  font-family: 'Montserrat-Bold', 'sans-serif';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 68px;
+  line-height: 80px;
+  color: $color-secondary;
+  z-index: 2;
+  justify-self: start;
+  display: inline-block;
+}

@@ -1,0 +1,53 @@
+@import '../../../../../public/css/main.scss';
+
+.Btn {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 48px;
+  position: relative;
+  padding: 1px;
+
+  span,
+  a {
+    font-family: 'Montserrat', 'sans-serif';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    color: white;
+    transition: 0.3s;
+  }
+}
+
+.Gradient {
+  background-image: $color-primary-gradient;
+  background-size: 120% 200%;
+  transition: 0.3s;
+  a,
+  div {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    border-radius: 48px;
+    padding: 10px 0;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    transition: 0.1s;
+  }
+
+  a {
+    color: white;
+    display: grid;
+    justify-content: center;
+  }
+
+  &:hover {
+    background-position: 100% 100%;
+    transition: 0.1s;
+  }
+}

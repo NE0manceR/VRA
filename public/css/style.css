@@ -1,0 +1,158 @@
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url(/fonts/Montserrat/Montserrat-Regular.woff);
+}
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: local('Montserrat'), url(/fonts/Montserrat/Montserrat-Bold.woff);
+}
+
+@font-face {
+  font-family: 'Montserrat-Extra-Bold';
+  src: local('Montserrat'), url(/fonts/Montserrat/Montserrat-ExtraBold.woff);
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 15px;
+  margin: 0;
+  line-height: 24px;
+  transition: 0.3s;
+}
+
+* {
+  cursor: url('../cursorA.svg'), pointer;
+  scroll-behavior: smooth;
+  transition: 0.3s;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+a {
+  cursor: pointer;
+}
+
+.root {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  background-color: #f2f2f2;
+}
+
+h2 {
+  font-family: 'Montserrat-Bold', 'sans-serif';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 61px;
+  letter-spacing: -0.5px;
+}
+
+h3 {
+  font-family: 'Montserrat-Bold', 'sans-serif';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 56px;
+  line-height: 64px;
+  color: #333333;
+}
+
+@media (max-width: 1024px) {
+
+  h1,
+  h2 {
+    font-size: 44px !important;
+    line-height: 50px !important;
+  }
+
+  h3 {
+    font-size: 48px !important;
+  }
+}
+
+body,
+html,
+#app,
+#app>div {
+  height: 100%;
+}
+
+body::-moz-viewport-scroll {
+  width: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.m-b-15 {
+  margin-bottom: 15px;
+}
+
+.cukhLH,
+.tXlBS {
+  overflow: visible !important;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #c1c1c1;
+}
+
+.rec-arrow {
+  display: none;
+}
+
+.Grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 24px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 100px 50px;
+}
+
+@media (max-width:1024px) {
+  .Grid {
+    padding: 50px 25px;
+  }
+}
+
+@media (max-width: 700px) {
+  .Grid {
+    padding: 50px 16px;
+  }
+}
+
+.showPage {
+  animation-name: showItems;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showItems {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

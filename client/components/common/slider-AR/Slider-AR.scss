@@ -1,0 +1,254 @@
+@import './../../../../public/css/main.scss';
+
+.ARslider {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 82px;
+
+  @media (max-width: 1060px) {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  &__chair {
+    width: 100%;
+    position: relative;
+  }
+
+  &__text-wrap {
+    display: grid;
+    grid-auto-rows: max-content;
+    grid-template-columns: minmax(100px, 390px);
+
+    @media (min-width: 1800px) {
+      grid-template-columns: minmax(100px, 490px);
+    }
+
+    @media (max-width: 1300px) {
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 1060px) {
+      padding: 0 16px;
+      order: -1;
+    }
+
+    p:nth-child(1),
+    p:nth-child(3),
+    span:nth-child(4) {
+      font-family: 'Montserrat-Bold', 'sans-serif';
+      font-style: normal;
+      font-weight: bold;
+      color: $color-ui-secondary-low;
+    }
+
+    p:nth-child(1) {
+      font-size: 64px;
+      line-height: 100.9%;
+      letter-spacing: 0.216667px;
+      margin-bottom: 32px;
+
+      @media (min-width: 1800px) {
+        font-size: 80px;
+      }
+
+      @media (max-width: 1300px) {
+        font-size: 46px;
+        margin-bottom: 24px;
+      }
+    }
+
+    p:nth-child(3) {
+      font-size: 48px;
+      line-height: 100.9%;
+      letter-spacing: 0.216667px;
+      margin-bottom: 32px;
+
+      @media (min-width: 1800px) {
+        font-size: 58px;
+      }
+
+      @media (max-width: 1300px) {
+        font-size: 28px;
+        margin-bottom: 24px;
+      }
+    }
+
+    span:nth-child(4) {
+      font-family: 'Montserrat', 'sans-serif';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 0.216667px;
+      display: inline-block;
+      max-width: 360px;
+
+      @media (min-width: 1800px) {
+        font-size: 28px;
+        line-height: 34px;
+        max-width: 460px;
+      }
+
+      @media (max-width: 1300px) {
+        font-size: 18px;
+        line-height: 24px;
+        max-width: 260px;
+      }
+    }
+  }
+
+  &__cube {
+    width: 40px;
+    height: 40px;
+    justify-self: start;
+    margin-bottom: 16px;
+
+    @media (min-width: 1800px) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &__btn-wrap {
+    display: grid;
+    grid-template-columns: repeat(5, max-content);
+    gap: 24px;
+    margin-top: 24px;
+
+    @media (max-width: 600px) {
+      gap: 0;
+      justify-content: space-between;
+    }
+
+    div {
+      display: grid;
+      justify-items: center;
+      gap: 4px;
+
+      span {
+        font-family: 'Montserrat', 'sans-serif';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #505050;
+      }
+    }
+  }
+
+  &__circle {
+    width: 26px;
+    height: 26px;
+    background-color: #5d6372;
+    border-radius: 100px;
+  }
+
+  .circle-2 {
+    background-color: #34687c !important;
+  }
+
+  .circle-3 {
+    background-color: #db966d !important;
+  }
+
+  .circle-4 {
+    background-color: #992e4a !important;
+  }
+
+  .circle-5 {
+    background-color: #dbba9b !important;
+  }
+
+  .circle-active {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 30px;
+      height: 30px;
+      border: 1px solid #bababa;
+      border-radius: 100px;
+      top: -3px;
+      animation: activeCircle-2 4s infinite ease-in-out;
+    }
+  }
+
+  @keyframes activeCircle-2 {
+    0% {
+    }
+
+    20% {
+      transform: scale(1, 1);
+    }
+
+    30% {
+      transform: scale(1.2, 1.2);
+    }
+
+    40% {
+      transform: scale(1, 1);
+    }
+
+    50% {
+      transform: scale(1.2, 1.2);
+    }
+
+    60% {
+      transform: scale(1, 1);
+    }
+
+    100% {
+    }
+  }
+
+  &__help-element {
+    opacity: 0;
+    z-index: 0;
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .interior-chairs {
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    max-width: 100%;
+  }
+
+  .active-chair {
+    animation: activeChair 0.6s forwards;
+    z-index: 7;
+    opacity: 0;
+  }
+
+  .no-active-chair {
+    z-index: 6;
+    animation: disactiveChair 0.6s forwards 0.5s;
+  }
+
+  @keyframes disactiveChair {
+    0% {
+      z-index: 6;
+    }
+
+    100% {
+      z-index: 0;
+    }
+  }
+
+  @keyframes activeChair {
+    0% {
+    }
+
+    100% {
+      opacity: 1;
+      z-index: 7;
+    }
+  }
+}

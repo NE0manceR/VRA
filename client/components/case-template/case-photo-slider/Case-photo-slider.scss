@@ -1,0 +1,94 @@
+@import '../../../../public/css/main.scss';
+
+.Photo-slider {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-rows: 50px 1fr 50px;
+  padding: 30px 30px 30px 15px;
+  background: rgba(0, 0, 0, 0.7);
+  transform: scale(0, 0);
+  opacity: 0;
+  transition: 0.3s;
+
+  .Close-btn {
+    justify-self: end;
+    z-index: 1;
+  }
+
+  .Close-slider {
+    z-index: 10;
+    justify-self: center;
+  }
+
+  .Slider-wrap {
+    grid-row: 2/2;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    position: absolute;
+    top: -84px;
+    transition: 0.4s;
+
+    img {
+      height: 100vh;
+    }
+  }
+
+  .Slider-wrap-btn {
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      color: blue;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  }
+
+  .Slider-Btn {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.25);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    transition: 0.3;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    svg path {
+      fill: $color-white;
+    }
+  }
+
+  .Slider-Btn:nth-child(1) {
+    svg {
+      transform: rotate(-180deg);
+    }
+  }
+
+  .Photo {
+    filter: grayscale(100%);
+  }
+
+  .Photo-style {
+    filter: grayscale(0);
+  }
+}
+
+.Photo-active {
+  transform: scale(1, 1);
+  opacity: 1;
+}

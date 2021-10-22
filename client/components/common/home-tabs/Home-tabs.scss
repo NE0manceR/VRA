@@ -1,0 +1,136 @@
+@import './../../../../public/css/main.scss';
+
+.Tab {
+  display: grid;
+  grid-template-columns: repeat(6, max-content);
+  margin-bottom: 24px;
+
+  &__bcg {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    font-family: 'Montserrat', 'sans-serif';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+    padding: 16px 32px;
+    transition: 0.3s;
+  }
+  &__wrap {
+    cursor: pointer;
+    padding: 1px;
+    border: none;
+    background: $color-primary-gradient;
+    &:hover .Tab__bcg {
+      background-color: transparent;
+      color: white;
+    }
+  }
+
+  &__active {
+    background: $color-primary-gradient;
+    color: white;
+  }
+
+  &__first-element,
+  &__first-element .Tab__bcg {
+    border-radius: 8px 0px 0px 8px;
+    order: -1;
+  }
+
+  &__last-element,
+  &__last-element .Tab__bcg {
+    border-radius: 0px 8px 8px 0px;
+  }
+}
+// ===================mobile====================
+.MobileTab {
+  z-index: 1;
+  width: 100%;
+
+  display: grid;
+  padding: 1px;
+  border-radius: 5px;
+  margin-bottom: 24px;
+  background: $color-primary-gradient;
+  filter: drop-shadow(0px 15px 24px rgba(0, 0, 0, 0.15));
+  cursor: pointer;
+
+  &__bcg {
+    border-radius: 4px 4px 4px 4px;
+    padding: 16px 0;
+    background-color: white;
+    position: relative;
+    display: grid;
+    justify-items: center;
+    transition: 0.3s;
+
+    img {
+      position: absolute;
+      right: 24px;
+      align-self: center;
+    }
+  }
+  &_bcg-active {
+    border-radius: 4px 4px 0 0;
+  }
+
+  &__text {
+    background: $color-primary-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Montserrat', 'sans-serif';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+  }
+
+  &_bcg-hover {
+    border-radius: 0;
+    &:hover {
+      background-color: transparent !important;
+    }
+  }
+
+  &__list {
+    display: grid;
+    overflow: hidden;
+    border-radius: 4px 4px 4px 4px;
+    height: 0;
+    transition: 0.2s;
+    height: 50px;
+  }
+
+  &__active-item {
+    order: -1;
+    transition: 0s;
+  }
+
+  &_list-active {
+    height: 312px;
+  }
+
+  &_bcg-hover:nth-child(7) {
+    border-radius: 0 0 4px 4px;
+  }
+  &_bcg-hover:hover .MobileTab__text {
+    background: none;
+    color: white;
+    -webkit-text-fill-color: white;
+  }
+}
+
+.MobTab_position {
+  position: relative;
+  margin-bottom: 32px;
+  grid-row: 3/3;
+  grid-column: 2/12;
+  @media (max-width: 700px) {
+    grid-column: 1/13;
+  }
+}

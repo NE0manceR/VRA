@@ -1,0 +1,90 @@
+@import '../../../../public/css/main.scss';
+
+.Accordion {
+  &__title {
+    display: grid;
+    grid-template-columns: 1fr 24px;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    // padding: 32px 0 24px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  &__title-active {
+    border: none;
+  }
+
+  &__question {
+    font-family: 'Montserrat', 'sans-serif';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 60px;
+    color: $color-ui-secondary-low;
+  }
+
+  &__question-active {
+    font-family: 'Montserrat-Bold', 'sans-serif';
+    font-weight: bold;
+  }
+
+  &__arrow {
+    transform: rotate(180deg);
+    transition: 0.3s;
+    justify-self: end;
+  }
+
+  &__arrow-active {
+    transform: rotate(360deg);
+  }
+
+  &__answer-wrap {
+    overflow: hidden;
+    transition: 0.3s;
+    position: relative;
+
+    &::before {
+      transition: 0.5s;
+      position: absolute;
+      content: '';
+      height: 3px;
+      width: 0%;
+      background-color: $color-primary;
+      bottom: 0;
+    }
+  }
+
+  &__answer-wrap-active {
+    position: relative;
+
+    &::before {
+      width: 100%;
+    }
+  }
+
+  &__answer {
+    margin: 24px 36px 38px 36px;
+    opacity: 0;
+    transition: 0.3s;
+    font-family: 'Montserrat', 'sans-serif';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 23px;
+    color: $color-ui-secondary-low;
+
+    @media (max-width: 600px) {
+      margin: 0 36px 38px 0;
+    }
+
+    a {
+      color: $color-primary;
+      text-decoration: underline;
+    }
+  }
+
+  &__answer-active {
+    opacity: 1;
+  }
+}

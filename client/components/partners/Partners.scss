@@ -1,0 +1,98 @@
+@import '../../../public/css/main.scss';
+
+.Partner {
+  background: white;
+  .Hero {
+    padding-top: 30px;
+
+    .Title {
+      font-family: 'Montserrat', 'sans-serif';
+      font-weight: 600;
+      font-size: 56px;
+      line-height: 64px;
+      color: $color-secondary;
+      margin-bottom: 42px;
+      grid-column: 1/13;
+      grid-row: 2/2;
+      margin-bottom: 64px !important;
+      text-align: center;
+
+      @media (max-width: 1024px) {
+        grid-column: 1/13 !important;
+      }
+
+      @media (max-width: 700px) {
+        font-size: 38px;
+        line-height: 41px;
+        letter-spacing: 0.25px;
+        margin-bottom: 8px;
+      }
+
+      span:nth-child(1) {
+        background-color: $color-ui-secondary-low;
+        color: $color-white;
+      }
+
+      span:nth-child(2) {
+        position: relative;
+        z-index: 1;
+        padding: 0 5px;
+
+        &::after {
+          position: absolute;
+          content: '';
+          height: 15px;
+          background-color: $color-primary;
+          width: 100%;
+          bottom: 5px;
+          left: 0;
+          z-index: -1;
+          margin-left: 10px !important;
+        }
+      }
+    }
+
+    &__partner {
+      grid-row: 3/3;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 204px);
+      grid-column: 2/12;
+      justify-content: center;
+      justify-items: center;
+      gap: 24px;
+      @media (max-width: 700px) {
+        grid-column: 1/13;
+      }
+
+      .img-wrap {
+        height: 135px;
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        justify-content: center;
+        align-content: center;
+        padding: 16px;
+        align-items: center;
+        grid-template-rows: 98px;
+        background: #f5f5f5;
+        border-radius: 10px;
+      }
+
+      img {
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain !important;
+      }
+    }
+
+    &__bread {
+      grid-column: 1/3;
+      grid-row: 1/1;
+      margin-bottom: 0 !important;
+
+      @media (max-width: 1024px) {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+}

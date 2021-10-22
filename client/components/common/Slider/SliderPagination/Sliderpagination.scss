@@ -1,0 +1,42 @@
+@import './../../../../../public/css/main.scss';
+
+.Pagination-Active {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+  background: $color-primary-gradient;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  transition: 0.3s;
+
+  &__Circle-Active {
+    width: 8px;
+    height: 8px;
+    // background: #9B9B9B;
+    background: #e5e5e5;
+    border-radius: 100px;
+    transition: 0.3s;
+  }
+}
+
+.Pagination {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  transition: 0.3s;
+  background-color: transparent;
+
+  &__Circle {
+    width: 8px;
+    height: 8px;
+    background: #9b9b9b;
+    border-radius: 100px;
+    transition: 0.3s;
+  }
+}

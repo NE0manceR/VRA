@@ -1,0 +1,11 @@
+<<<<<<< HEAD
+{
+  "cSpell.ignoreWords": [
+    "children",
+    "замовити"
+  ]
+=======
+{
+  "compile-hero.disable-compile-files-on-did-save-code": true
+>>>>>>> 16755829742fb9383c43e8fe99a3ceb76ad6fe16
+}

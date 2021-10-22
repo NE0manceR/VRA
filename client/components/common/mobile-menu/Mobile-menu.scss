@@ -1,0 +1,261 @@
+@import '../../../../public/css/main.scss';
+
+.MobMenu {
+  position: absolute;
+  background: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.18), 0px 2px 4px rgba(0, 0, 0, 0.24);
+  top: 0;
+  height: 100vh;
+  width: 80%;
+  z-index: 20;
+  left: -100vw;
+  transition: 0.3s;
+  overflow-y: scroll;
+  opacity: 0;
+
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+
+  &__mobileBurger {
+    img {
+      padding: 10px 0 10px 0;
+      cursor: pointer;
+    }
+
+    display: none;
+
+    @media (max-width: 1130px) {
+      display: block;
+      order: -1;
+      align-self: center;
+    }
+  }
+
+  &__mobileBurger.exited {
+    @media (max-width: 450px) {
+      display: none;
+    }
+  }
+
+  &__mobileBurger.entering {
+    @media (max-width: 450px) {
+      display: none;
+    }
+  }
+
+  &__close {
+    padding: 16px;
+  }
+
+  &__title {
+    font-family: 'Montserrat', 'sans-serif';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.001em;
+    color: #212121;
+  }
+
+  &__link {
+    font-family: 'Montserrat', 'sans-serif';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.216667px;
+    color: #616161;
+    cursor: pointer;
+  }
+
+  &__link-title {
+    padding: 12px 16px;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__link-list {
+    overflow: hidden;
+    height: 0;
+    transition: 0.3s;
+    display: grid;
+    justify-content: start;
+
+    a {
+      padding: 12px 16px 19.35px;
+    }
+  }
+
+  &__link-wrap {
+    padding: 12px 16px 13.35px;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    justify-content: space-between;
+    align-items: center;
+
+    svg {
+      justify-self: end;
+    }
+
+    a {
+      padding: 0;
+      display: inline;
+    }
+  }
+
+  &__link-list-design {
+    height: 193px;
+  }
+
+  &__link-list-promo {
+    height: 602px;
+  }
+
+  &__link-list-visual {
+    height: 480px;
+  }
+
+  &__link-list-textile {
+    height: 336px;
+  }
+
+  &__link-list-about {
+    height: 192px;
+  }
+
+  &__link-list-print {
+    height: 212px;
+    justify-content: initial;
+    .MobMenu__link-title svg {
+      justify-self: end;
+    }
+  }
+
+  &__wrap {
+    .MobMenu__link-title,
+    .MobMenu__link-list {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    .MobMenu__title {
+      font-weight: 700;
+      background: $color-primary-gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    svg {
+      transition: 0.3s;
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+.MobMenu-active {
+  left: 0;
+  opacity: 1;
+}
+
+.testBlock {
+  height: 100px;
+  width: 100px;
+  background-color: yellowgreen;
+}
+
+.testBlock:nth-child(4) {
+  height: 200px;
+}
+
+svg {
+  transition: 0.3s;
+}
+
+.MobMenu::-webkit-scrollbar {
+  width: 2px;
+}
+
+.Second__Menu {
+  animation: show 0.3s forwards;
+
+  a {
+    padding: 12px 16px 19.35px;
+    display: block;
+    font-family: 'Montserrat', 'sans-serif';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.001em;
+    color: #212121;
+  }
+
+  button {
+    padding: 12px 16px 12px;
+    width: 100%;
+    background: none;
+    border: none;
+    display: grid;
+    outline: none;
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 12px;
+
+    span {
+      font-weight: 700;
+      background: $color-primary-gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    img {
+      padding: 0;
+    }
+  }
+}
+
+.Second__Menu-hide {
+  animation: hide 0.3s forwards;
+}
+
+@keyframes show {
+  0% {
+    transform: translateX(+300px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes hide {
+  0% {
+  }
+
+  100% {
+    transform: translateX(+300px);
+    opacity: 0;
+  }
+}
+
+.MobMenu-print__return {
+  transform: translateX(-500px);
+  opacity: 0;
+  animation: return 0.4s forwards;
+}
+
+@keyframes return {
+  0% {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

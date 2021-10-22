@@ -1,0 +1,118 @@
+@import '../../../public/css/main.scss';
+
+.Pricing {
+  &__price-wrap {
+    grid-column: 2/12;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 289px);
+    justify-content: space-between;
+    row-gap: 24px;
+
+    @media (max-width: 740px) {
+      justify-content: center;
+    }
+  }
+
+  &__price-card-bcg-gradient {
+    padding: 1px;
+    border-radius: 6px;
+    transition: 0.3s;
+    background-color: $color-secondary;
+
+    // &:hover {
+    //   box-shadow: 0 0 40px rgba(0, 0, 0, 0.12);
+    //   background: $color-primary-gradient;
+    // }
+
+    // &:hover .Pricing__price {
+    //   background: $color-primary-gradient;
+    //   -webkit-background-clip: text;
+    //   -webkit-text-fill-color: transparent;
+    // }
+
+    // &:hover .Pricing__price-card-bcg-white {
+    //   background-color: white;
+    // }
+
+    // &:hover .Pricing__plan {
+    //   background: $color-primary-gradient;
+    //   -webkit-background-clip: text;
+    //   -webkit-text-fill-color: transparent;
+    // }
+  }
+
+  &__popular .White__popular {
+    background-color: white;
+  }
+
+  &__popular {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.12);
+    background: $color-primary-gradient;
+
+    .Pricing__price {
+      background: $color-primary-gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .Pricing__plan {
+      background: $color-primary-gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__price-card-bcg-white {
+    background: $color-ui-primary;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    display: grid;
+    padding: 16px 40px;
+    align-items: start;
+    grid-template-rows: repeat(7, max-content) 1fr;
+    row-gap: 16px;
+  }
+
+  &__work-plan {
+    font-family: 'Montserrat', 'sans-serif';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: $color-secondary;
+  }
+
+  &__price {
+    background: $color-secondary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Montserrat-Bold', 'sans-serif';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 64px;
+    text-align: center;
+
+    span {
+      font-size: 24px;
+    }
+  }
+
+  &__btn {
+    align-self: end;
+    width: 160px;
+    justify-self: center;
+    margin-top: 40px;
+  }
+
+  &__plan {
+    font-family: 'Montserrat-Bold', 'sans-serif';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: $color-secondary;
+    margin-bottom: 16px !important;
+  }
+}
